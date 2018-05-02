@@ -112,7 +112,7 @@ assertFile() {
 assertFileDoesNotExist() {
   local name=${1}
   local tgt="${BUILD_DIR}/${name}"
-  assertTrue "File ${name} exist" "[ ! -f ${tgt} ]"
+  assertTrue "File ${name} exists" "[ ! -f ${tgt} ]"
 }
 
 assertFileExists() {
@@ -128,7 +128,7 @@ assertDirExists() {
 
 assertDirDoesNotExist() {
   local path=${1}
-  assertTrue "Dir ${path} does not exist" "[ ! -d ${path} ]"
+  assertTrue "Dir ${path} exists" "[ ! -d ${path} ]"
 }
 
 assertCompiledBinaryExists() {
