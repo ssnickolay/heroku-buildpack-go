@@ -416,6 +416,7 @@ case "${TOOL}" in
         fi
         massagePkgSpecForVendor
         
+        export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$build/.heroku/vendor/lib"
         step "Running: go install -v ${FLAGS[@]} ${pkgs}"
         go install -v "${FLAGS[@]}" ${pkgs} 2>&1
     ;;
