@@ -302,7 +302,7 @@ ensureGo() {
     local goVersionPatch=0
     local goVersionSpecial=0
     semverParseInto ${goVersion#"go"} goVersionMajor goVersionMinor goVersionPatch goVersionSpecial
-    if ([ "$goVersionMajor" -eq 1 ] && [ "$goVersionMinor" -ge 10 ]) || [ "$goVersionMajor" -gt 1 ]; then
+    if ([ "$goVersionMajor" -eq 1 ] && [ "$goVersionMinor" -ge 10 ]) || [ "$goVersionMajor" -gt 1 ] 2>/dev/null; then
       export GOCACHE="${cache}/${goVersion}/build-cache"
     fi
 
